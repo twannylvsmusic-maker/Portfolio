@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Search Generator - Robert A. Van Dyke</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .header p {
+            font-size: 1.3em;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .project-overview {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .overview-text h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .overview-text p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .tech-stack {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        .tech-stack h3 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+
+        .tech-list {
+            list-style: none;
+        }
+
+        .tech-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .tech-list li:before {
+            content: "⚡";
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        .features-section {
+            margin: 40px 0;
+        }
+
+        .features-section h2 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .feature-card {
+            background: #fff;
+            border: 1px solid #e8e8e8;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .demo-section {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .demo-section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .demo-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn-outline:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .puzzle-preview {
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 30px 0;
+            display: inline-block;
+        }
+
+        .puzzle-grid {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 2px;
+            margin: 20px 0;
+        }
+
+        .puzzle-cell {
+            width: 35px;
+            height: 35px;
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            background: #f8f9fa;
+            font-size: 0.9em;
+        }
+
+        .word-list {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .word-list h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .word-item {
+            display: inline-block;
+            background: #e9ecef;
+            padding: 5px 10px;
+            margin: 2px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+
+        .implementation-section {
+            margin: 40px 0;
+        }
+
+        .implementation-section h2 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        .code-highlight {
+            background: #f8f9fa;
+            border: 1px solid #e8e8e8;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+
+        .code-highlight pre {
+            margin: 0;
+            color: #333;
+        }
+
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+        }
+
+        .footer a {
+            color: #66aaff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .project-overview {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .demo-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="../index.html" class="back-link">← Back to Portfolio</a>
+            <h1>Word Search Generator</h1>
+            <p>A modern, feature-rich puzzle generator with customizable shapes and themes</p>
+        </div>
+
+        <div class="content">
+            <div class="project-overview">
+                <div class="overview-text">
+                    <h2>Project Overview</h2>
+                    <p>This project showcases my full-stack development skills through a comprehensive word search puzzle generator. Built with Flask and modern web technologies, it demonstrates expertise in algorithm design, user interface development, and document generation.</p>
+                    
+                    <p>The application features real-time puzzle preview, multiple shape options (including animals and objects), customizable themes and fonts, and professional PDF/Word export capabilities. It's designed with accessibility in mind and provides an intuitive user experience.</p>
+                    
+                    <p><strong>Key Achievement:</strong> Successfully implemented a complex puzzle generation algorithm that handles word placement, collision detection, and shape-based constraints while maintaining optimal performance.</p>
+                </div>
+
+                <div class="tech-stack">
+                    <h3>Technologies Used</h3>
+                    <ul class="tech-list">
+                        <li>Python & Flask</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>HTML5 & CSS3</li>
+                        <li>ReportLab (PDF)</li>
+                        <li>python-docx</li>
+                        <li>Pillow (Image Processing)</li>
+                        <li>Responsive Design</li>
+                        <li>Git & Version Control</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="features-section">
+                <h2>✨ Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>🎨 Customizable Shapes</h3>
+                        <p>Multiple shape options including basic shapes (square, circle, diamond), fun shapes (heart, star, butterfly), and animal shapes (dog, cat, fish).</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>⚡ Real-time Preview</h3>
+                        <p>Live puzzle generation as you type, with instant visual feedback and word placement validation.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>📄 Export Options</h3>
+                        <p>Professional PDF and Word document export with customizable fonts, themes, and formatting options.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>🎯 Smart Algorithm</h3>
+                        <p>Intelligent word placement algorithm that handles collision detection and optimizes puzzle density.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>📱 Responsive Design</h3>
+                        <p>Mobile-first design that works seamlessly across desktop, tablet, and mobile devices.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>♿ Accessibility Focus</h3>
+                        <p>Built with accessibility in mind, featuring proper contrast ratios and keyboard navigation support.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-section">
+                <h2>🎮 Live Demo</h2>
+                <p>Experience the full application with all features including real-time preview, custom shapes, and export functionality.</p>
+                
+                <div class="puzzle-preview">
+                    <h3>Sample Puzzle Preview</h3>
+                    <div class="puzzle-grid">
+                        <div class="puzzle-cell">W</div>
+                        <div class="puzzle-cell">O</div>
+                        <div class="puzzle-cell">R</div>
+                        <div class="puzzle-cell">D</div>
+                        <div class="puzzle-cell">S</div>
+                        <div class="puzzle-cell">E</div>
+                        <div class="puzzle-cell">A</div>
+                        <div class="puzzle-cell">R</div>
+                        <div class="puzzle-cell">C</div>
+                        <div class="puzzle-cell">H</div>
+                        <div class="puzzle-cell">G</div>
+                        <div class="puzzle-cell">A</div>
+                        <div class="puzzle-cell">M</div>
+                        <div class="puzzle-cell">E</div>
+                        <div class="puzzle-cell">S</div>
+                        <div class="puzzle-cell">F</div>
+                        <div class="puzzle-cell">U</div>
+                        <div class="puzzle-cell">N</div>
+                        <div class="puzzle-cell">P</div>
+                        <div class="puzzle-cell">U</div>
+                        <div class="puzzle-cell">Z</div>
+                        <div class="puzzle-cell">Z</div>
+                        <div class="puzzle-cell">L</div>
+                        <div class="puzzle-cell">E</div>
+                        <div class="puzzle-cell">S</div>
+                        <div class="puzzle-cell">O</div>
+                        <div class="puzzle-cell">L</div>
+                        <div class="puzzle-cell">V</div>
+                        <div class="puzzle-cell">E</div>
+                        <div class="puzzle-cell">R</div>
+                        <div class="puzzle-cell">S</div>
+                        <div class="puzzle-cell">T</div>
+                        <div class="puzzle-cell">A</div>
+                        <div class="puzzle-cell">R</div>
+                        <div class="puzzle-cell">T</div>
+                        <div class="puzzle-cell">S</div>
+                        <div class="puzzle-cell">H</div>
+                        <div class="puzzle-cell">A</div>
+                        <div class="puzzle-cell">P</div>
+                        <div class="puzzle-cell">E</div>
+                        <div class="puzzle-cell">S</div>
+                        <div class="puzzle-cell">C</div>
+                        <div class="puzzle-cell">I</div>
+                        <div class="puzzle-cell">R</div>
+                        <div class="puzzle-cell">C</div>
+                        <div class="puzzle-cell">L</div>
+                        <div class="puzzle-cell">E</div>
+                        <div class="puzzle-cell">S</div>
+                        <div class="puzzle-cell">H</div>
+                        <div class="puzzle-cell">E</div>
+                        <div class="puzzle-cell">A</div>
+                        <div class="puzzle-cell">R</div>
+                        <div class="puzzle-cell">T</div>
+                        <div class="puzzle-cell">S</div>
+                        <div class="puzzle-cell">D</div>
+                        <div class="puzzle-cell">I</div>
+                        <div class="puzzle-cell">A</div>
+                        <div class="puzzle-cell">M</div>
+                        <div class="puzzle-cell">O</div>
+                        <div class="puzzle-cell">N</div>
+                        <div class="puzzle-cell">D</div>
+                        <div class="puzzle-cell">S</div>
+                        <div class="puzzle-cell">T</div>
+                        <div class="puzzle-cell">R</div>
+                        <div class="puzzle-cell">I</div>
+                        <div class="puzzle-cell">A</div>
+                        <div class="puzzle-cell">N</div>
+                        <div class="puzzle-cell">G</div>
+                        <div class="puzzle-cell">L</div>
+                        <div class="puzzle-cell">E</div>
+                        <div class="puzzle-cell">S</div>
+                    </div>
+                    <div class="word-list">
+                        <h3>Words to Find:</h3>
+                        <span class="word-item">WORDSEARCH</span>
+                        <span class="word-item">GAMES</span>
+                        <span class="word-item">FUN</span>
+                        <span class="word-item">PUZZLES</span>
+                        <span class="word-item">SOLVER</span>
+                        <span class="word-item">STAR</span>
+                        <span class="word-item">SHAPES</span>
+                        <span class="word-item">CIRCLES</span>
+                        <span class="word-item">HEART</span>
+                        <span class="word-item">DIAMOND</span>
+                        <span class="word-item">TRIANGLE</span>
+                    </div>
+                </div>
+
+                <div class="demo-buttons">
+                    <a href="https://wordsearch-generator-demo.herokuapp.com" class="btn btn-primary" target="_blank">
+                        🚀 Try Live Demo
+                    </a>
+                    <a href="https://github.com/twannylvsmusic-maker/wordsearch-generator" class="btn btn-outline" target="_blank">
+                        📁 View Source Code
+                    </a>
+                    <a href="mailto:ravandyke44@yahoo.com" class="btn btn-secondary">
+                        💬 Contact Me
+                    </a>
+                </div>
+            </div>
+
+            <div class="implementation-section">
+                <h2>🔧 Technical Implementation</h2>
+                
+                <h3>Puzzle Generation Algorithm</h3>
+                <p>The core challenge was creating an efficient algorithm that could place words in various directions while respecting shape constraints and avoiding collisions.</p>
+                
+                <div class="code-highlight">
+                    <pre>def generate_puzzle(words, shape, allow_vertical=True, allow_horizontal=True, allow_diagonal=True):
+    # Initialize grid based on shape
+    grid = create_shape_grid(shape)
+    
+    # Sort words by length (longest first) for better placement
+    sorted_words = sorted(words, key=len, reverse=True)
+    
+    placed_words = []
+    for word in sorted_words:
+        # Try multiple placement strategies
+        if place_word_in_grid(word, grid, placed_words, allow_vertical, allow_horizontal, allow_diagonal):
+            placed_words.append(word)
+    
+    return grid, placed_words</pre>
+                </div>
+
+                <h3>Shape System Architecture</h3>
+                <p>Implemented a modular shape system using mask-based placement, allowing for easy addition of new shapes without modifying core logic.</p>
+
+                <h3>Export Pipeline</h3>
+                <p>Created a robust export system supporting both PDF (ReportLab) and Word (python-docx) formats with consistent formatting and professional layouts.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>📧 <a href="mailto:ravandyke44@yahoo.com">Contact Me</a> | 🌐 <a href="https://linkedin.com/in/robert-van-dyke" target="_blank">LinkedIn</a></p>
+            <p>&copy; 2025 Robert A. Van Dyke. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
