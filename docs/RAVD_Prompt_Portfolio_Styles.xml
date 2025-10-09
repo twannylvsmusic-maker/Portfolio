@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Styles>
+  <ParagraphStyle name="Heading1" font="Calibri" size="14" bold="true"/>
+  <ParagraphStyle name="Normal" font="Calibri" size="11"/>
+  <TableHeader fill="#D9D9D9" bold="true"/>
+  <Footer font="Calibri" size="9" align="center">R.A. Van Dyke | Prompt Engineer Portfolio</Footer>
+</Styles>
