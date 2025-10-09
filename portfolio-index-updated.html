@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robert A. Van Dyke | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
+    header {
+      background: linear-gradient(135deg, #1e1e2f, #2a2a42, #1e1e2f);
+      color: #fff;
+      padding: 3rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    header h1 { margin: 0; font-size: 2.8rem; letter-spacing: 1px; }
+    header p { margin-top: .5rem; font-size: 1.2rem; color: #bbb; }
+    .tagline {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+      color: #f0f0f0;
+      margin-top: 1rem;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
+      opacity: 0;
+      animation: fadeIn 2s ease-in forwards;
+      animation-delay: 0.8s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .avatar {
+      width: 125px; height: 125px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid rgba(255,255,255,0.6);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+      margin: 1.5rem auto 0;
+      display: block;
+    }
+    section { padding: 2rem; max-width: 900px; margin: auto; }
+    h2 { color: #444; border-bottom: 2px solid #ddd; padding-bottom: .5rem; }
+    ul { list-style: none; padding: 0; }
+    ul li { margin: .5rem 0; }
+    .project { margin-bottom: 1.5rem; }
+    footer { background: #222; color: #fff; text-align: center; padding: 1.5rem; margin-top: 2rem; }
+    a { color: #66aaff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin-top: 1rem; }
+    .card { background: #fff; border: 1px solid #e8e8e8; border-radius: 14px; box-shadow: 0 8px 22px rgba(0,0,0,0.06); overflow: hidden; transition: transform .2s ease, box-shadow .2s ease; }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,0.1); }
+    .card img { width: 100%; height: 150px; object-fit: cover; display: block; }
+    .card-body { padding: 1rem 1rem 1.1rem; }
+    .card h3 { margin: 0 0 .35rem 0; font-size: 1.05rem; color: #222; }
+    .card p { margin: 0.35rem 0 0; color: #555; font-size: .95rem; }
+    .meta { display:flex; align-items:center; justify-content:space-between; margin-top:.6rem; font-size:.85rem; color:#666; }
+    .badge { display:inline-block; padding:.18rem .5rem; border-radius:999px; font-size:.75rem; background:#eef2ff; color:#4158d0; border:1px solid #dfe6ff; }
+    .badge.live { background:#e8f5e8; color:#2d5a2d; border:1px solid #c3e6c3; }
+    .badge.wip { background:#fff3cd; color:#856404; border:1px solid #ffeaa7; }
+    .link { text-decoration:none; color:#0066cc; font-weight:600; }
+    .link:hover { text-decoration:underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Robert A. Van Dyke</h1>
+    <p>Prompt Engineer | Technical Program Manager & Continuous Improvement Enthusiast | AI-Driven Innovator</p>
+    <img src="me.jpg" alt="Robert A. Van Dyke" class="avatar">
+    <p class="tagline">"Let your imagination live"</p>
+    <p>📍 <a href="https://linkedin.com/in/robert-van-dyke" target="_blank" style="color:#fff;">LinkedIn</a> | 📧 <a href="mailto:ravandyke44@yahoo.com" style="color:#fff;">Email</a></p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>I'm a Certified Scrum Master and Six Sigma Black Belt with 20+ years leading technical projects. Recently, I've expanded my expertise into <strong>AI Prompt Engineering</strong> — designing scalable prompt strategies, evaluations, and frameworks that bridge product goals with LLM execution. My passion is building <strong>efficient, AI-powered systems</strong> that help teams make better decisions, faster.</p>
+  </section>
+
+  <section>
+    <h2>Skills & Tools</h2>
+    <ul>
+      <li><strong>AI & Prompting:</strong> Prompt Engineering, AI Prompting, Vibe Coding, Microsoft Cursor, Microsoft Copilot, Data Analysis with ChatGPT, LLM Evaluation Design</li>
+      <li><strong>Agile & Ops:</strong> Scrum, Kanban, SAFe, Program Management, Continuous Improvement</li>
+      <li><strong>Tech & Tools:</strong> Jira, Confluence, SaaS, Microsoft Office, LLM Evaluation Pipelines</li>
+      <li><strong>Development:</strong> Python, Flask, JavaScript, HTML/CSS, Full-Stack Development, Algorithm Design</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Featured Projects</h2>
+    <div class="projects">
+      <article class="card">
+        <!-- <img src="projects/nfl_preview.png" alt="Fantasy Football Draft Forecasting Preview"> -->
+        <div class="card-body">
+          <h3>Fantasy Football Draft Forecasting (Data + LLM)</h3>
+          <div class="meta">
+            <span class="badge live">Live</span>
+            <a class="link" href="projects/Fantasy-football-draft-forcasting.html">Open</a>
+          </div>
+          <p>LLM-powered framework analyzing NFL Combine data to predict rookie-year success (>700 yds). Blends stats and prompting.</p>
+        </div>
+      </article>
+      <article class="card">
+        <!-- <img src="projects/onboarding_preview.png" alt="Onboarding Gap Analysis Preview"> -->
+        <div class="card-body">
+          <h3>Onboarding Gap Analysis Framework</h3>
+          <div class="meta">
+            <span class="badge wip">WIP</span>
+            <a class="link" href="projects/onboarding-framework.html">Open</a>
+          </div>
+          <p>Prompt-driven evaluation template that turns ambiguous business inputs into structured improvement plans.</p>
+        </div>
+      </article>
+      <article class="card">
+        <!-- <img src="projects/web_ci_preview.png" alt="My Prompt Library Preview"> -->
+        <div class="card-body">
+          <h3>My Prompt Library</h3>
+          <div class="meta">
+            <span class="badge live">Live</span>
+            <a class="link" href="projects/my-prompt-library.html">Open</a>
+          </div>
+          <p>Core + advanced patterns for web, deployment, and CI with scored use cases and export-ready tables.</p>
+        </div>
+      </article>
+      <article class="card">
+        <!-- <img src="projects/wordsearch_preview.png" alt="Word Search Generator Preview"> -->
+        <div class="card-body">
+          <h3>Word Search Generator (Full-Stack App)</h3>
+          <div class="meta">
+            <span class="badge live">Live</span>
+            <a class="link" href="projects/wordsearch-generator.html">Open</a>
+          </div>
+          <p>Complete Flask application with customizable shapes, real-time preview, PDF/Word export, and intelligent puzzle generation algorithm. Features image upload (beta) and responsive design. <strong>Live demo available!</strong></p>
+        </div>
+      </article>
+    </div>
+    <p style="margin-top:1rem; color:#666; font-size:.9rem;">Tip: Add preview images to <code>/projects</code> and remove the HTML comments to display them. Set the badge text to <em>Live</em>, <em>WIP</em>, or any status you prefer.</p>
+  </section>
+
+  <section>
+    <h2>Certifications</h2>
+    <ul>
+      <li>Prompt Engineering for ChatGPT – 2025</li>
+      <li>Vibe Coding with Microsoft Cursor – 2025</li>
+      <li>Certified Scrum Master – 2016</li>
+      <li>Six Sigma DFSS Black Belt – 2010</li>
+      <li>ISO 9000 Internal Auditor</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Living Portfolio / Blog</h2>
+    <p>Coming soon: Regular updates where I'll share my experiments with prompt strategies, LLM evaluations, and applied AI use cases.</p>
+  </section>
+
+  <footer>
+    <p>📧 <a href="mailto:ravandyke44@yahoo.com" style="color:#fff;">Contact Me</a> | 🌐 <a href="https://linkedin.com/in/robert-van-dyke" target="_blank" style="color:#fff;">LinkedIn</a></p>
+    <p>&copy; 2025 Robert A. Van Dyke</p>
+  </footer>
+</body>
+</html>
