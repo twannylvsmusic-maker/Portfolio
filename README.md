@@ -64,7 +64,7 @@ A comprehensive showcase of AI, data science, and prompt engineering projects.
 
 - **Email**: ravandyke44@yahoo.com
 - **LinkedIn**: [linkedin.com/in/robert-van-dyke](https://linkedin.com)
-- **Portfolio**: [YOURUSERNAME.github.io](https://YOURUSERNAME.github.io)
+- **Portfolio**: [twannylvsmusic-maker.github.io/Portfolio](https://twannylvsmusic-maker.github.io/Portfolio)
 
 ---
 
