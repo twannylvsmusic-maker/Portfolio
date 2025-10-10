@@ -20,7 +20,7 @@ A professional portfolio showcasing AI, data science, and full-stack development
 - **Technologies**: AI/ML, Data Analysis, Prompt Engineering
 
 ### 📚 **Prompt Library** - Comprehensive Prompt Engineering
-- **Description**: Core and advanced patterns for web, deployment, and CI with scored use cases and export-ready tables.
+- **Description**: Core and advanced prompt patterns for web deployment, project management, and continuous improvement—complete with scored use cases, visual rankings, and export-ready tables.
 - **Technologies**: Prompt Engineering, AI, Documentation
 
 ### 📋 **Onboarding Framework** - Structured Improvement Planning
