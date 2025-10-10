@@ -49,8 +49,8 @@ A professional portfolio showcasing AI, data science, and full-stack development
 - **Prompt Engineering for ChatGPT** – 2025
 - **Vibe Coding with Microsoft Cursor** – 2025
 - **Certified Scrum Master** – 2016
+- **ISO 9000 Auditor** – 2012
 - **Six Sigma DFSS Black Belt** – 2010
-- **ISO 9000 Auditor - 2012**
 
 ## 📞 Contact
 
