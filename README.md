@@ -30,11 +30,11 @@ A professional portfolio showcasing AI, data science, and full-stack development
 ## 🛠️ Skills & Technologies
 
 ### **AI & Prompt Engineering**
-- Prompt Engineering, AI Prompting, Vibe Coding
+- Prompt Engineering, AI Prompting
 - Microsoft Cursor, Microsoft Copilot
 - Data Analysis with ChatGPT, LLM Evaluation Design
 
-### **Full-Stack Development**
+### **Full-Stack Development (Vibe Coding)**
 - Python, Flask, JavaScript, HTML/CSS
 - Algorithm Design, Database Management
 - Cloud Deployment (Heroku, GitHub Pages)
@@ -50,7 +50,7 @@ A professional portfolio showcasing AI, data science, and full-stack development
 - **Vibe Coding with Microsoft Cursor** – 2025
 - **Certified Scrum Master** – 2016
 - **Six Sigma DFSS Black Belt** – 2010
-- **ISO 9000 Internal Auditor**
+- **ISO 9000 Auditor - 2012**
 
 ## 📞 Contact
 
