@@ -1,6 +1,6 @@
 # Robert A. Van Dyke - Portfolio
 
-A comprehensive showcase of AI, data science, and prompt engineering projects.
+A showcase of my AI, data science, and prompt engineering projects.
 
 ## 🚀 Quick Deploy to GitHub Pages
 
@@ -55,10 +55,25 @@ A comprehensive showcase of AI, data science, and prompt engineering projects.
 
 ## 📊 Featured Projects
 
-1. **Fantasy Football Draft Forecasting** - AI-powered rookie success prediction
-2. **Prompt Library** - Comprehensive prompt engineering patterns
-3. **Agile PMP Project Management System** - Enhanced project management solution combining traditional PMP methodologies with modern Agile practices, powered by advanced automation and Business Intelligence
-4. **Puzzle Generator** - Accessibility-focused word search creation
+### 🏈 **Fantasy Football Draft Forecasting** - AI-Powered Analytics
+
+* **Description**: LLM-powered framework analyzing NFL Combine data to predict rookie-year success (>700 yds). Blends statistical analysis with AI prompting.
+* **Technologies**: AI/ML, Data Analysis, Prompt Engineering
+
+### 📚 **Prompt Library** - Comprehensive Prompt Engineering
+
+* **Description**: Core and advanced prompt patterns for web deployment, project management, and continuous improvement—complete with scored use cases, visual rankings, and export-ready tables.
+* **Technologies**: Prompt Engineering, AI, Documentation
+
+### 🎯 **Agile PMP Project Management System** - Enhanced Project Management
+
+* **Description**: Enhanced project management solution combining traditional PMP methodologies with modern Agile practices, powered by advanced automation and Business Intelligence.
+* **Technologies**: Project Management, Automation, Power BI, Python, Excel
+
+### 🧩 **Puzzle Generator** - Accessibility-Focused Word Search
+
+* **Description**: Shape-based word search generator with accessibility features and PDF output.
+* **Technologies**: Python, Flask, Accessibility, PDF Generation
 
 ## 📞 Contact
 
