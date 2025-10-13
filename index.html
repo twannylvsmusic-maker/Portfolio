@@ -15,7 +15,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #282a36;
             min-height: 100vh;
         }
 
@@ -69,12 +69,13 @@
         .hero {
             padding: 4rem 0;
             text-align: center;
-            color: white;
+            color: #f8f8f2;
             position: relative;
             min-height: 60vh;
             display: flex;
             align-items: center;
             justify-content: center;
+            background: #282a36;
         }
 
         .hero-content {
@@ -88,12 +89,14 @@
             font-size: 3.5rem;
             margin-bottom: 1rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            color: #f8f8f2;
         }
 
         .hero .subtitle {
             font-size: 1.3rem;
             margin-bottom: 2rem;
             opacity: 0.9;
+            color: #f8f8f2;
         }
 
         .hero .tagline {
@@ -102,6 +105,7 @@
             margin-bottom: 2rem;
             opacity: 0.8;
             animation: floatIn 2s ease-in-out;
+            color: #f8f8f2;
         }
 
         @keyframes floatIn {
@@ -141,12 +145,31 @@
             border-radius: 25px;
             transition: all 0.3s ease;
             font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
         .contact-links a:hover {
             background: #f8f8f2;
             color: #282a36;
             transform: translateY(-2px);
+        }
+
+        .contact-links a .icon {
+            font-size: 1.2rem;
+        }
+
+        .contact-links a:nth-child(1) .icon {
+            color: #ff79c6; /* Pink for LinkedIn */
+        }
+
+        .contact-links a:nth-child(2) .icon {
+            color: #ff79c6; /* Pink for GitHub */
+        }
+
+        .contact-links a:nth-child(3) .icon {
+            color: #8be9fd; /* Blue for Email */
         }
 
         /* Main Content */
@@ -409,9 +432,9 @@
                 <div class="subtitle">Prompt Engineer | Technical Program Manager & Continuous Improvement Enthusiast | AI-Driven Innovator</div>
                 <div class="tagline">"Let your imagination live"</div>
                 <div class="contact-links">
-                    <a href="https://linkedin.com/in/robert-van-dyke" target="_blank">📍 LinkedIn</a>
-                    <a href="https://github.com/twannylvsmusic-maker" target="_blank">🐙 GitHub</a>
-                    <a href="mailto:ravandyke44@yahoo.com">📧 Email</a>
+                    <a href="https://linkedin.com/in/robert-van-dyke" target="_blank"><span class="icon">📍</span> LinkedIn</a>
+                    <a href="https://github.com/twannylvsmusic-maker" target="_blank"><span class="icon">🐙</span> GitHub</a>
+                    <a href="mailto:ravandyke44@yahoo.com"><span class="icon">📧</span> Email</a>
                 </div>
             </div>
         </div>
