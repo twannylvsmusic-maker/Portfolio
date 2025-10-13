@@ -97,7 +97,7 @@ A showcase of my AI, data science, and prompt engineering projects.
 ## 📞 Contact
 
 * **Email**: ravandyke44@yahoo.com
-* **LinkedIn**: [linkedin.com/in/robert-van-dyke](https://linkedin.com/in/robert-van-dyke)
+* **LinkedIn**: [linkedin.com/in/robert-a-van-dyke-20b8a116](https://www.linkedin.com/in/robert-a-van-dyke-20b8a116/)
 * **Portfolio**: [twannylvsmusic-maker.github.io](https://twannylvsmusic-maker.github.io)
 * **GitHub**: [github.com/twannylvsmusic-maker](https://github.com/twannylvsmusic-maker)
 
