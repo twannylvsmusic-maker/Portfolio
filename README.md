@@ -1,68 +1,72 @@
 # Robert A. Van Dyke - Portfolio
 
-A professional portfolio showcasing AI, data science, and full-stack development projects.
+A comprehensive showcase of AI, data science, and prompt engineering projects.
 
-## 🚀 View My Portfolio
+## 🚀 Quick Deploy to GitHub Pages
 
-**Live Portfolio**: [twannylvsmusic-maker.github.io](https://twannylvsmusic-maker.github.io)
+1. Create a public repository named `twannylvsmusic-maker.github.io`
+2. Upload all contents to the root of that repository
+3. Ensure `index.html` is in the root directory
+4. Visit `https://twannylvsmusic-maker.github.io` after deployment
+
+## 📁 Portfolio Structure
+
+### Main Files
+- `index.html` — Main portfolio with hero section, skills, and featured projects
+- `me.jpg` — Professional headshot (replace with your photo)
+- `README.md` — This documentation
+
+### Projects Directory (`/projects/`)
+- `Fantasy-football-draft-forcasting.html` — LLM-powered NFL analytics
+- `my-prompt-library.html` — Core and advanced prompt patterns
+- `hybrid-project-management.html` — Agile PMP Project Management System
+- `puzzle-generator.html` — Accessibility-focused word search generator
+
+### Data Templates (`/data/`)
+- `fantasy_football/` — NFL combine and projection templates
+- `customer_support/` — Zoho sentiment analysis templates
+
+### Documentation (`/docs/`)
+- `RAVD_Prompt_Portfolio.docx` — Complete Word portfolio
+- `RAVD_Prompt_Portfolio_Styles.xml` — Style guidelines
+
+## 🎨 Customization
+
+### Update Personal Information
+- Edit `index.html` to update headline, contact links, and project descriptions
+- Replace `me.jpg` with your professional headshot
+- Update email and LinkedIn links in the header and footer
+
+### Add Project Images
+- Place screenshots in `/projects/` directory
+- Uncomment the `<img>` tags in project cards to display images
+- Recommended image names: `nfl_preview.png`, `web_ci_preview.png`, etc.
+
+### Project Status Badges
+- Update badge text in project cards: `Live`, `WIP`, `Coming Soon`, etc.
+- Modify badge colors in CSS if needed
+
+## 🛠️ Technologies Used
+
+- **Frontend**: HTML5, CSS3, Responsive Design
+- **AI & Analytics**: Prompt Engineering, LLM Evaluation, Data Analysis
+- **Tools**: Microsoft Cursor, ChatGPT, Jira, Confluence
+- **Methodologies**: Agile, Scrum, Six Sigma, Continuous Improvement
 
 ## 📊 Featured Projects
 
-### 🎯 **Word Search Generator** - Full-Stack Flask Application
-- **Live Demo**: [Try the Application](https://heroku-create-wordsearch-demo-209b734ec5ec.herokuapp.com/)
-- **Source Code**: [GitHub Repository](https://github.com/twannylvsmusic-maker/wordsearch-generator)
-- **Description**: Modern Flask application with customizable shapes, real-time preview, PDF/Word export, and intelligent puzzle generation algorithm. Features image upload (beta) and responsive design.
-- **Technologies**: Python, Flask, JavaScript, HTML/CSS, ReportLab, python-docx
-- **Applications**: Educational use, healthcare therapy, professional training
-
-### 🏈 **Fantasy Football Draft Forecasting** - AI-Powered Analytics
-- **Description**: LLM-powered framework analyzing NFL Combine data to predict rookie-year success (>700 yds). Blends statistical analysis with AI prompting.
-- **Technologies**: AI/ML, Data Analysis, Prompt Engineering
-
-### 📚 **Prompt Library** - Comprehensive Prompt Engineering
-- **Description**: Core and advanced prompt patterns for web deployment, project management, and continuous improvement—complete with scored use cases, visual rankings, and export-ready tables.
-- **Technologies**: Prompt Engineering, AI, Documentation
-
-### 📋 **Onboarding Framework** - Structured Improvement Planning
-- **Description**: Prompt-driven evaluation template that turns ambiguous business inputs into structured improvement plans.
-- **Technologies**: Process Improvement, Documentation, Templates
-
-## 🛠️ Skills & Technologies
-
-### **AI & Prompt Engineering**
-- Prompt Engineering, AI Prompting
-- Microsoft Cursor, Microsoft Copilot
-- Data Analysis with ChatGPT, LLM Evaluation Design
-
-### **Full-Stack Development (Vibe Coding)**
-- Python, Flask, JavaScript, HTML/CSS
-- Algorithm Design, Database Management
-- Cloud Deployment (Heroku, GitHub Pages)
-
-### **Project Management & Process Improvement**
-- Agile, Scrum, SAFe, Program Management
-- Six Sigma Black Belt, Continuous Improvement
-- Jira, Confluence, Process Documentation
-
-## 🎓 Certifications
-
-- **Prompt Engineering for ChatGPT** – 2025
-- **Vibe Coding with Microsoft Cursor** – 2025
-- **Certified Scrum Master** – 2016
-- **ISO 9000 Auditor** – 2012
-- **Six Sigma DFSS Black Belt** – 2010
+1. **Fantasy Football Draft Forecasting** - AI-powered rookie success prediction
+2. **Prompt Library** - Comprehensive prompt engineering patterns
+3. **Agile PMP Project Management System** - Enhanced project management solution combining traditional PMP methodologies with modern Agile practices, powered by advanced automation and Business Intelligence
+4. **Puzzle Generator** - Accessibility-focused word search creation
 
 ## 📞 Contact
 
 - **Email**: ravandyke44@yahoo.com
-- **LinkedIn**: [linkedin.com/in/robert-van-dyke](https://linkedin.com/in/robert-van-dyke)
+- **LinkedIn**: [linkedin.com/in/robert-van-dyke](https://linkedin.com)
 - **Portfolio**: [twannylvsmusic-maker.github.io](https://twannylvsmusic-maker.github.io)
-- **GitHub**: [github.com/twannylvsmusic-maker](https://github.com/twannylvsmusic-maker)
-
-## 🎯 About Me
-
-I'm a Certified Scrum Master and Six Sigma Black Belt with 20+ years leading technical projects. Recently, I've expanded my expertise into **AI Prompt Engineering** — designing scalable prompt strategies, evaluations, and frameworks that bridge product goals with LLM execution. My passion is building **efficient, AI-powered systems** that help teams make better decisions, faster.
 
 ---
 
 © 2025 Robert A. Van Dyke. All rights reserved.
+
