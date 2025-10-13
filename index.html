@@ -293,6 +293,18 @@
             background: #17a2b8;
         }
 
+        .project-badge.coming-soon {
+            background: linear-gradient(45deg, #ff6b6b, #ffa500);
+            color: white;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
         .project-description {
             color: #666;
             margin-bottom: 1.5rem;
@@ -496,6 +508,28 @@
             <section id="projects" class="section">
                 <h2>Featured Projects</h2>
                 <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-title">🏆 AI Chess Tutor v3</div>
+                            <div class="project-badge coming-soon">Coming Soon</div>
+                        </div>
+                        <div class="project-description">
+                            An intelligent chess learning platform that uses AI to analyze positions and guide players toward strategic mastery. Features real-time move highlighting (green/yellow/red), personalized explanations, and blunder review system to accelerate chess learning for players of all levels.
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Stockfish</span>
+                            <span class="tech-tag">AI Analysis</span>
+                            <span class="tech-tag">Chess.js</span>
+                            <span class="tech-tag">Machine Learning</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="projects/ai-chess-tutor.html">Details</a>
+                            <a href="https://github.com/twannylvsmusic-maker" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+
                     <div class="project-card">
                         <div class="project-header">
                             <div class="project-title">Fantasy Football Draft Strategy Builder</div>
