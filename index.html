@@ -70,11 +70,18 @@
             padding: 4rem 0;
             text-align: center;
             color: white;
+            position: relative;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .hero-content {
             max-width: 800px;
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
 
         .hero h1 {
@@ -94,6 +101,29 @@
             font-style: italic;
             margin-bottom: 2rem;
             opacity: 0.8;
+            animation: floatIn 2s ease-in-out;
+        }
+
+        @keyframes floatIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 0.8;
+                transform: translateY(0);
+            }
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin: 2rem auto;
+            display: block;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
         }
 
         .contact-links {
@@ -373,6 +403,7 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
+                <img src="me.jpg" alt="Robert A. Van Dyke" class="profile-image">
                 <h1>Robert A. Van Dyke</h1>
                 <div class="subtitle">Prompt Engineer | Technical Program Manager & Continuous Improvement Enthusiast | AI-Driven Innovator</div>
                 <div class="tagline">"Let your imagination live"</div>
@@ -515,7 +546,8 @@
                             <span class="tech-tag">PDF Generation</span>
                         </div>
                         <div class="project-links">
-                            <a href="projects/puzzle-generator.html">Details</a>
+                            <a href="https://github.com/twannylvsmusic-maker/Wordsearch-generator" target="_blank">GitHub</a>
+                            <a href="https://heroku-create-wordsearch-demo-209b734ec5ec.herokuapp.com/" target="_blank">Live Demo</a>
                         </div>
                     </div>
                 </div>
