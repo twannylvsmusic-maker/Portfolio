@@ -1,119 +1,122 @@
-# 🏆 AI Chess Tutor v3 - Coming Soon
+# Robert A. Van Dyke - Portfolio
 
-> **An intelligent chess learning platform that uses AI to analyze positions and guide players toward strategic mastery through visual feedback and personalized explanations.**
+A showcase of my AI, data science, and prompt engineering projects.
 
-[![React](https://img.shields.io/badge/React-18+-blue.svg)](https://reactjs.org/)
-[![Stockfish](https://img.shields.io/badge/Stockfish-16.1.0-green.svg)](https://stockfishchess.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
-[![Status](https://img.shields.io/badge/Status-In%20Development-orange.svg)]()
+## 🚀 Quick Deploy to GitHub Pages
 
-## 🎯 Project Vision
+1. Create a public repository named `twannylvsmusic-maker.github.io`
+2. Upload all contents to the root of that repository
+3. Ensure `index.html` is in the root directory
+4. Visit `https://twannylvsmusic-maker.github.io` after deployment
 
-Transform chess learning through AI-powered analysis that makes strategic thinking accessible to players of all levels. Our interactive tutor provides real-time feedback, visual move highlighting, and personalized explanations to accelerate chess mastery.
+## 📁 Portfolio Structure
 
-## ✨ Core Features
+### Main Files
 
-### 🎨 Visual Move Analysis
-- **🟢 Best Move**: Highlighted in green with detailed explanations
-- **🟡 Alternate Moves**: Yellow highlighting for viable alternatives  
-- **🔴 Poor Moves**: Red indicators for tactical mistakes
-- **📊 Real-time Evaluation**: Live position assessment with centipawn scores
+* `index.html` — Main portfolio with hero section, skills, and featured projects
+* `me.jpg` — Professional headshot (replace with your photo)
+* `README.md` — This documentation
 
-### 🧠 Intelligent Learning System
-- **"Why Not?" Explainer**: Immediate feedback on move quality
-- **Blunder Review Queue**: Track and replay mistakes for improvement
-- **Multi-PV Analysis**: Explore multiple move variations simultaneously
-- **Adaptive Difficulty**: Adjusts analysis depth based on skill level
+### Projects Directory (`/projects/`)
 
-### 🎮 Interactive Experience
-- **Live Chess Board**: Full game play with AI analysis
-- **Move History**: Track your learning journey
-- **Position Analysis**: Deep dive into any board state
-- **Export Features**: Save games and share positions
+* `ai-chess-tutor.html` — **NEW** AI Chess Tutor v3 - Coming Soon
+* `fantasy-football-strategy-builder.html` — Keeper League Draft Strategy with Sentiment Analysis
+* `my-prompt-library.html` — Core and advanced prompt patterns
+* `hybrid-project-management.html` — Agile PMP Project Management System
+* `puzzle-generator.html` — Accessibility-focused word search generator
 
-## 🚀 Planned Features
+### Data Templates (`/data/`)
 
-### Phase 1: Core Implementation
-- [ ] Complete visual move highlighting system
-- [ ] Enhanced move explanations with chess terminology
-- [ ] Responsive design for mobile/tablet
-- [ ] Performance optimization
+* `fantasy_football/` — NFL combine and projection templates
+* `customer_support/` — Zoho sentiment analysis templates
 
-### Phase 2: Learning Modes
-- [ ] **Tactics Trainer**: Puzzle-based tactical exercises
-- [ ] **Opening Explorer**: Database integration for opening theory
-- [ ] **Endgame Practice**: Specialized endgame training
-- [ ] **Game Analysis**: Upload and analyze existing games
+### Documentation (`/docs/`)
 
-### Phase 3: Advanced Features
-- [ ] **Progress Tracking**: Statistics and improvement metrics
-- [ ] **Customization**: Themes, piece sets, analysis settings
-- [ ] **Community Features**: Share positions, discuss strategies
-- [ ] **AI Opponent**: Practice against different difficulty levels
+* `RAVD_Prompt_Portfolio.docx` — Complete Word portfolio
+* `RAVD_Prompt_Portfolio_Styles.xml` — Style guidelines
 
-## 🛠️ Technology Stack
+## 🎨 Customization
 
-- **Frontend**: React 18+ with TypeScript
-- **Chess Engine**: Stockfish 16.1.0 (WebAssembly)
-- **UI Framework**: Tailwind CSS + shadcn/ui components
-- **Chess Logic**: chess.js for game state management
-- **Board Rendering**: react-chessboard for interactive display
-- **Animations**: Framer Motion for smooth transitions
+### Update Personal Information
 
-## 📱 Screenshots & Demo
+* Edit `index.html` to update headline, contact links, and project descriptions
+* Replace `me.jpg` with your professional headshot
+* Update email and LinkedIn links in the header and footer
 
-*Coming soon - Interactive demo will be available here*
+### Add Project Images
 
-## 🎯 Target Audience
+* Place screenshots in `/projects/` directory
+* Uncomment the `<img>` tags in project cards to display images
+* Recommended image names: `nfl_preview.png`, `web_ci_preview.png`, etc.
 
-- **Beginners**: Learn fundamental chess principles with clear explanations
-- **Intermediate Players**: Improve tactical awareness and positional understanding  
-- **Advanced Players**: Fine-tune strategic thinking and explore complex variations
-- **Educators**: Use as a teaching tool for chess instruction
+### Project Status Badges
 
-## 🚧 Development Status
+* Update badge text in project cards: `Live`, `WIP`, `Coming Soon`, `Beta`, etc.
+* Modify badge colors in CSS if needed
 
-**Current Phase**: Prototype Development
-- ✅ Core chess engine integration
-- ✅ Basic move analysis framework
-- ✅ Blunder tracking system
-- 🔄 Visual highlighting implementation
-- 🔄 Enhanced explanations system
-- ⏳ Mobile responsiveness
-- ⏳ Advanced learning modes
+## 🛠️ Technologies Used
 
-## 🤝 Contributing
+* **Frontend**: HTML5, CSS3, Responsive Design
+* **AI & Analytics**: Prompt Engineering, LLM Evaluation, Data Analysis, Sentiment Analysis
+* **Tools**: Microsoft Cursor, ChatGPT, Jira, Confluence, Streamlit
+* **Methodologies**: Agile, Scrum, Six Sigma, Continuous Improvement
 
-This project is currently in active development. Contributions, suggestions, and feedback are welcome!
+## 📊 Featured Projects
 
-### How to Contribute
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+### 🏆 **AI Chess Tutor v3** - Coming Soon
 
-## 📄 License
+* **Description**: An intelligent chess learning platform that uses AI to analyze positions and guide players toward strategic mastery. Features real-time move highlighting (green/yellow/red), personalized explanations, and blunder review system to accelerate chess learning for players of all levels.
+* **Technologies**: React, TypeScript, Stockfish, AI Analysis, Chess.js, Machine Learning
+* **Status**: Coming Soon - Currently in development
+* **GitHub**: [AI Chess Tutor Repository](https://github.com/twannylvsmusic-maker)
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+### 🏈 **Fantasy Football Draft Strategy Builder** - Keeper League Analytics
 
-## 📞 Contact & Support
+* **Description**: Comprehensive keeper league draft strategy tool with sentiment analysis, availability simulation, and WR success prediction. Features real-time ESPN/FantasyPros integration and confidence intervals for keeper vs draft decisions.
+* **Technologies**: Python, Streamlit, scikit-learn, Sentiment Analysis, API Integration, Machine Learning
+* **Status**: Beta - Currently in testing phase
+* **GitHub**: fantasy-football-draft-strategy-builder
 
-- **Project Lead**: Robert A. Van Dyke
-- **Email**: ravandyke44@yahoo.com
-- **LinkedIn**: [linkedin.com/in/robert-a-van-dyke-20b8a116](https://linkedin.com/in/robert-a-van-dyke-20b8a116)
-- **Portfolio**: [twannylvsmusic-maker.github.io](https://twannylvsmusic-maker.github.io/)
-- **GitHub**: [github.com/twannylvsmusic-maker](https://github.com/twannylvsmusic-maker)
+### 📚 **Prompt Library** - Comprehensive Prompt Engineering
 
-## 🙏 Acknowledgments
+* **Description**: Core and advanced prompt patterns for web deployment, project management, and continuous improvement—complete with scored use cases, visual rankings, and export-ready tables.
+* **Technologies**: Prompt Engineering, AI, Documentation
 
-- [Stockfish](https://stockfishchess.org/) - World-class chess engine
-- [chess.js](https://github.com/jhlywa/chess.js) - Chess logic library
-- [react-chessboard](https://github.com/Clariity/react-chessboard) - Interactive chess board component
-- Chess community for inspiration and feedback
+### 🎯 **Agile PMP Project Management System** - Enhanced Project Management
+
+* **Description**: Enhanced project management solution combining traditional PMP methodologies with modern Agile practices, powered by advanced automation and Business Intelligence.
+* **Technologies**: Project Management, Automation, Power BI, Python, Excel
+
+### 🧩 **Puzzle Generator** - Accessibility-Focused Word Search
+
+* **Description**: Shape-based word search generator with accessibility features and PDF output.
+* **Technologies**: Python, Flask, Accessibility, PDF Generation
+
+## 🆕 Recent Updates
+
+### January 2025
+
+* **NEW PROJECT**: AI Chess Tutor v3
+  * Started development of intelligent chess learning platform
+  * Features AI-powered position analysis and visual move highlighting
+  * Built with React, TypeScript, and Stockfish chess engine
+  * Currently in prototype development phase
+  * Added new skills: Chess AI Development, Stockfish Integration, Interactive Chess UI
+
+* **UPDATED PROJECT**: Fantasy Football Draft Strategy Builder  
+  * Completed comprehensive keeper league draft strategy tool  
+  * Integrated sentiment analysis, availability simulation, and WR success prediction  
+  * Built with Streamlit, Python, and machine learning models  
+  * Currently in beta testing phase  
+  * Added new skills: Streamlit Development, Fantasy Sports Analytics, Sentiment Analysis Integration
+
+## 📞 Contact
+
+* **Email**: ravandyke44@yahoo.com
+* **LinkedIn**: [linkedin.com/in/robert-a-van-dyke-20b8a116](https://linkedin.com/in/robert-a-van-dyke-20b8a116)
+* **Portfolio**: [twannylvsmusic-maker.github.io](https://twannylvsmusic-maker.github.io/)
+* **GitHub**: [github.com/twannylvsmusic-maker](https://github.com/twannylvsmusic-maker)
 
 ---
 
-**⭐ Star this repository to stay updated on development progress!**
-
-*Last updated: December 2024*
+© 2025 Robert A. Van Dyke. All rights reserved.
