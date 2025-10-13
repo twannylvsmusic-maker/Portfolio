@@ -1,162 +1,563 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Robert A. Van Dyke | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
-    header {
-      background: linear-gradient(135deg, #1e1e2f, #2a2a42, #1e1e2f);
-      color: #fff;
-      padding: 3rem 1rem;
-      text-align: center;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    }
-    header h1 { margin: 0; font-size: 2.8rem; letter-spacing: 1px; }
-    header p { margin-top: .5rem; font-size: 1.2rem; color: #bbb; }
-    .tagline {
-      font-family: 'Great Vibes', cursive;
-      font-size: 2rem;
-      color: #f0f0f0;
-      margin-top: 1rem;
-      letter-spacing: 1px;
-      text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
-      opacity: 0;
-      animation: fadeIn 2s ease-in forwards;
-      animation-delay: 0.8s;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(15px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .avatar {
-      width: 125px; height: 125px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid rgba(255,255,255,0.6);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
-      margin: 1.5rem auto 0;
-      display: block;
-    }
-    section { padding: 2rem; max-width: 900px; margin: auto; }
-    h2 { color: #444; border-bottom: 2px solid #ddd; padding-bottom: .5rem; }
-    ul { list-style: none; padding: 0; }
-    ul li { margin: .5rem 0; }
-    .project { margin-bottom: 1.5rem; }
-    footer { background: #222; color: #fff; text-align: center; padding: 1.5rem; margin-top: 2rem; }
-    a { color: #66aaff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin-top: 1rem; }
-    .card { background: #fff; border: 1px solid #e8e8e8; border-radius: 14px; box-shadow: 0 8px 22px rgba(0,0,0,0.06); overflow: hidden; transition: transform .2s ease, box-shadow .2s ease; }
-    .card:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,0.1); }
-    .card img { width: 100%; height: 150px; object-fit: cover; display: block; }
-    .card-body { padding: 1rem 1rem 1.1rem; }
-    .card h3 { margin: 0 0 .35rem 0; font-size: 1.05rem; color: #222; }
-    .card p { margin: 0.35rem 0 0; color: #555; font-size: .95rem; }
-    .meta { display:flex; align-items:center; justify-content:space-between; margin-top:.6rem; font-size:.85rem; color:#666; }
-    .badge { display:inline-block; padding:.18rem .5rem; border-radius:999px; font-size:.75rem; font-weight:600; }
-    .badge.live { background:#e8f5e8; color:#2e7d32; border:1px solid #4caf50; }
-    .badge.wip { background:#fff3e0; color:#f57c00; border:1px solid #ff9800; }
-    .badge.coming-soon { background:#f3e5f5; color:#7b1fa2; border:1px solid #9c27b0; }
-    .link { text-decoration:none; color:#0066cc; font-weight:600; }
-    .link:hover { text-decoration:underline; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert A. Van Dyke - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 0;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero .tagline {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            border: 2px solid white;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .contact-links a:hover {
+            background: white;
+            color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        /* Main Content */
+        main {
+            background: white;
+            padding: 4rem 0;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #333;
+        }
+
+        .section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+
+        /* About Section */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        .skill-category h4 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 0.3rem 0;
+            color: #666;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-badge {
+            background: #28a745;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .project-badge.beta {
+            background: #ffc107;
+            color: #333;
+        }
+
+        .project-badge.wip {
+            background: #17a2b8;
+        }
+
+        .project-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-tag {
+            background: #e9ecef;
+            color: #495057;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-links a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border: 1px solid #667eea;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .project-links a:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        /* Certifications Section */
+        .certifications {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .cert-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            border-left: 4px solid #667eea;
+        }
+
+        .cert-item h4 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-item .year {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-content a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-content a:hover {
+            color: #667eea;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Robert A. Van Dyke</h1>
-    <p>Prompt Engineer | Technical Program Manager & Continuous Improvement Enthusiast | AI-Driven Innovator</p>
-    <img src="me.jpg" alt="Robert A. Van Dyke" class="avatar">
-    <p class="tagline">“Let your imagination live”</p>
-    <p>📍 <a href="https://linkedin.com" target="_blank" style="color:#fff;">LinkedIn</a> | 🐙 <a href="https://github.com/twannylvsmusic-maker" target="_blank" style="color:#fff;">GitHub</a> | 📧 <a href="mailto:ravandyke44@yahoo.com" style="color:#fff;">Email</a></p>
-  </header>
+    <header>
+        <nav class="container">
+            <div class="logo">Robert A. Van Dyke</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>I’m a Certified Scrum Master and Six Sigma Black Belt with 20+ years leading technical projects. Recently, I’ve expanded my expertise into <strong>AI Prompt Engineering</strong> — designing scalable prompt strategies, evaluations, and frameworks that bridge product goals with LLM execution. My passion is building <strong>efficient, AI-powered systems</strong> that help teams make better decisions, faster.</p>
-  </section>
-
-  <section>
-    <h2>Skills & Tools</h2>
-    <ul>
-      <li><strong>AI & Prompting:</strong> Prompt Engineering, AI Prompting, Vibe Coding, Microsoft Cursor, Microsoft Copilot, Data Analysis with ChatGPT, LLM Evaluation Design</li>
-      <li><strong>Agile & Ops:</strong> Scrum, Kanban, SAFe, Program Management, Continuous Improvement</li>
-      <li><strong>Tech & Tools:</strong> Jira, Confluence, SaaS, Microsoft Office, LLM Evaluation Pipelines</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Featured Projects</h2>
-    <div class="projects">
-      <article class="card">
-        <!-- <img src="projects/nfl_preview.png" alt="Fantasy Football Draft Forecasting Preview"> -->
-        <div class="card-body">
-          <h3>Fantasy Football Draft Forecasting (Data + LLM)</h3>
-          <div class="meta">
-            <span class="badge wip">WIP</span>
-            <a class="link" href="projects/Fantasy-football-draft-forcasting.html">Open</a>
-          </div>
-          <p>LLM-powered framework analyzing NFL Combine data to predict rookie-year success (>700 yds). Blends stats and prompting.</p>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Robert A. Van Dyke</h1>
+                <div class="subtitle">Prompt Engineer | Technical Program Manager & Continuous Improvement Enthusiast | AI-Driven Innovator</div>
+                <div class="tagline">"Let your imagination live"</div>
+                <div class="contact-links">
+                    <a href="https://linkedin.com/in/robert-van-dyke" target="_blank">📍 LinkedIn</a>
+                    <a href="https://github.com/twannylvsmusic-maker" target="_blank">🐙 GitHub</a>
+                    <a href="mailto:ravandyke44@yahoo.com">📧 Email</a>
+                </div>
+            </div>
         </div>
-      </article>
-      <article class="card">
-        <!-- <img src="projects/hybrid_project_preview.png" alt="Hybrid Project Management System Preview"> -->
-        <div class="card-body">
-          <h3>Hybrid PMP + Agile Project Management System</h3>
-          <div class="meta">
-            <span class="badge wip">WIP</span>
-            <a class="link" href="projects/hybrid-project-management.html">Open</a>
-          </div>
-          <p>Enhanced project management solution combining traditional PMP methodologies with modern Agile practices, powered by advanced automation and Business Intelligence.</p>
-        </div>
-      </article>
-      <article class="card">
-        <!-- <img src="projects/web_ci_preview.png" alt="My Prompt Library Preview"> -->
-        <div class="card-body">
-          <h3>My Prompt Library</h3>
-          <div class="meta">
-            <span class="badge live">Live</span>
-            <a class="link" href="projects/my-prompt-library.html">Open</a>
-          </div>
-          <p>Core + advanced patterns for web, deployment, and CI with scored use cases and export-ready tables.</p>
-        </div>
-      </article>
-      <article class="card">
-        <!-- <img src="projects/puzzle_preview.png" alt="Puzzle Generator Preview"> -->
-        <div class="card-body">
-          <h3>Puzzle Generator (Accessibility Project)</h3>
-          <div class="meta">
-            <span class="badge live">Live</span>
-            <a class="link" href="projects/puzzle-generator.html">Open</a>
-          </div>
-          <p>Shape-based word search generator with accessibility features and PDF output.</p>
-        </div>
-      </article>
-    </div>
-    <p style="margin-top:1rem; color:#666; font-size:.9rem;">Tip: Add preview images to <code>/projects</code> and remove the HTML comments to display them. Set the badge text to <em>Live</em>, <em>WIP</em>, or any status you prefer.</p>
-  </section>
+    </section>
 
-  <section>
-    <h2>Certifications</h2>
-    <ul>
-      <li>Prompt Engineering for ChatGPT – 2025</li>
-      <li>Vibe Coding with Microsoft Cursor – 2025</li>
-      <li>Certified Scrum Master – 2016</li>
-      <li>Six Sigma DFSS Black Belt – 2010</li>
-      <li>ISO 9000 Internal Auditor</li>
-    </ul>
-  </section>
+    <main>
+        <div class="container">
+            <section id="about" class="section">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <p>I'm a Certified Scrum Master and Six Sigma Black Belt with 20+ years leading technical projects. Recently, I've expanded my expertise into <strong>AI Prompt Engineering</strong> — designing scalable prompt strategies, evaluations, and frameworks that bridge product goals with LLM execution. My passion is building <strong>efficient, AI-powered systems</strong> that help teams make better decisions, faster.</p>
+                </div>
+            </section>
 
-  <section>
-    <h2>Living Portfolio / Blog</h2>
-    <p>Coming soon: Regular updates where I’ll share my experiments with prompt strategies, LLM evaluations, and applied AI use cases.</p>
-  </section>
+            <section id="skills" class="section">
+                <h2>Skills & Tools</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>AI & Prompting</h4>
+                        <ul>
+                            <li>Prompt Engineering</li>
+                            <li>AI Prompting</li>
+                            <li>Vibe Coding</li>
+                            <li>Microsoft Cursor</li>
+                            <li>Microsoft Copilot</li>
+                            <li>Data Analysis with ChatGPT</li>
+                            <li>LLM Evaluation Design</li>
+                            <li>Streamlit Development</li>
+                            <li>Fantasy Sports Analytics</li>
+                            <li>Sentiment Analysis Integration</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Agile & Ops</h4>
+                        <ul>
+                            <li>Scrum</li>
+                            <li>Kanban</li>
+                            <li>SAFe</li>
+                            <li>Program Management</li>
+                            <li>Continuous Improvement</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Tech & Tools</h4>
+                        <ul>
+                            <li>Jira</li>
+                            <li>Confluence</li>
+                            <li>SaaS</li>
+                            <li>Microsoft Office</li>
+                            <li>LLM Evaluation Pipelines</li>
+                            <li>API Scraping & Data Integration</li>
+                            <li>Python</li>
+                            <li>Machine Learning</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
-  <footer>
-    <p>📧 <a href="mailto:ravandyke44@yahoo.com" style="color:#fff;">Contact Me</a> | 🌐 <a href="https://linkedin.com" target="_blank" style="color:#fff;">LinkedIn</a> | 🐙 <a href="https://github.com/twannylvsmusic-maker" target="_blank" style="color:#fff;">GitHub</a></p>
-    <p>&copy; 2025 Robert A. Van Dyke</p>
-  </footer>
+            <section id="projects" class="section">
+                <h2>Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-title">Fantasy Football Draft Strategy Builder</div>
+                            <div class="project-badge beta">Beta</div>
+                        </div>
+                        <div class="project-description">
+                            Comprehensive keeper league draft strategy tool with sentiment analysis, availability simulation, and WR success prediction. Features real-time ESPN/FantasyPros integration and confidence intervals for keeper vs draft decisions. Built with Streamlit, Python, and machine learning models.
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Streamlit</span>
+                            <span class="tech-tag">scikit-learn</span>
+                            <span class="tech-tag">Sentiment Analysis</span>
+                            <span class="tech-tag">API Integration</span>
+                            <span class="tech-tag">Machine Learning</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/twannylvsmusic-maker/fantasy-football-draft-strategy-builder" target="_blank">GitHub</a>
+                            <a href="projects/fantasy-football-strategy-builder.html">Details</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-title">My Prompt Library</div>
+                            <div class="project-badge">Live</div>
+                        </div>
+                        <div class="project-description">
+                            Core + advanced patterns for web, deployment, and CI with scored use cases and export-ready tables.
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Prompt Engineering</span>
+                            <span class="tech-tag">AI</span>
+                            <span class="tech-tag">Documentation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="projects/my-prompt-library.html">Details</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-title">Hybrid PMP + Agile Project Management System</div>
+                            <div class="project-badge wip">WIP</div>
+                        </div>
+                        <div class="project-description">
+                            Enhanced project management solution combining traditional PMP methodologies with modern Agile practices, powered by advanced automation and Business Intelligence.
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Project Management</span>
+                            <span class="tech-tag">Automation</span>
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="projects/hybrid-project-management.html">Details</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-title">Puzzle Generator (Accessibility Project)</div>
+                            <div class="project-badge">Live</div>
+                        </div>
+                        <div class="project-description">
+                            Shape-based word search generator with accessibility features and PDF output.
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Accessibility</span>
+                            <span class="tech-tag">PDF Generation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="projects/puzzle-generator.html">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="certifications" class="section">
+                <h2>Certifications</h2>
+                <div class="certifications">
+                    <div class="cert-item">
+                        <h4>Prompt Engineering for ChatGPT</h4>
+                        <div class="year">2025</div>
+                    </div>
+                    <div class="cert-item">
+                        <h4>Vibe Coding with Microsoft Cursor</h4>
+                        <div class="year">2025</div>
+                    </div>
+                    <div class="cert-item">
+                        <h4>Certified Scrum Master</h4>
+                        <div class="year">2016</div>
+                    </div>
+                    <div class="cert-item">
+                        <h4>Six Sigma DFSS Black Belt</h4>
+                        <div class="year">2010</div>
+                    </div>
+                    <div class="cert-item">
+                        <h4>ISO 9000 Internal Auditor</h4>
+                        <div class="year">-</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <a href="mailto:ravandyke44@yahoo.com">📧 Contact Me</a>
+                <a href="https://linkedin.com/in/robert-van-dyke" target="_blank">🌐 LinkedIn</a>
+                <a href="https://github.com/twannylvsmusic-maker" target="_blank">🐙 GitHub</a>
+            </div>
+            <p>&copy; 2025 Robert A. Van Dyke</p>
+        </div>
+    </footer>
 </body>
 </html>
